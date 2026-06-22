@@ -49,7 +49,7 @@ I needed a scriptable video rendering solution that:
     c.mp4,0,8.5,180
     d.mp4,22,30,270
     ```
-    * **source:** The file path of the video relative to the `/data/src-videos/` directory. e.g. If you list `a.mp4` in the CSV, the script will look up `/data/src-videos/a.mp4` for processing.
+    * **source:** The file path of the video relative to the `/data/src-videos/` directory. (e.g., If you list `a.mp4` in the CSV, the script will look up `/data/src-videos/a.mp4` for processing.)
     * **start_time / end_time:** Cut boundaries in seconds. Aim for a maximum of **3 decimal places** (e.g., `15.593` for millisecond-precision cuts). While the script can read longer numbers without crashing, FFmpeg only really uses 3 decimal places for calculating the nearest video frame.
     * **rotation:** May only be set to one of 0, 90, 180, 270. 0 (no change), 90 (clockwise), 180 (upside down), and 270 (counter-clockwise).
 
