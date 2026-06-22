@@ -8,7 +8,7 @@ A simple Python-based rendering engine running in Docker that automatically proc
 I needed a scriptable video rendering solution that:
 
 * ✅ Runs in a Dockerised Python environment
-* ✅ Run as non-root user for 'least privilege' policy
+* ✅ Runs as non-root user, 'least privilege' policy
 * ✅ Triggers by n8n request
 * ✅ Wraps complicated FFmpeg syntax
 * ✅ Processes one or more manifest CSV inputs
