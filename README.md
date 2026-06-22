@@ -10,16 +10,19 @@ When triggered by webhook, this script makes slices from videos in your `/data/s
 
 ## 💎 Features
 
-I needed a video compilation script that:
+Why make this and not use an alternative?
 
+I needed a video compilation script that:
+* ✅ Wraps complicated FFmpeg syntax
+* ✅ Fixes source video inconsistencies before joining
+* ✅ Rotates and resizes videos
+* ✅ Makes videos from one or more source videos
+
+With these more specific needs:
 * ✅ Runs in a Dockerised Python environment
 * ✅ Runs as non-root user
 * ✅ Triggers by webhook and reports HTTP status
-* ✅ Wraps complicated FFmpeg syntax
-* ✅ Normalises source videos in different formats
-* ✅ Rotates and resizes videos
-* ✅ Produces many-to-many videos
-* ✅ Only renders for new or changed manifest CSVs
+* ✅ Only renders a video if inputs are new or changed
 
 
 ## 🧱 Dependencies
