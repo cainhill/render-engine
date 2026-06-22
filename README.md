@@ -4,13 +4,13 @@ A simple Python-based rendering engine running in Docker that automatically proc
 
 ## How It Works
 
-This script runs a simple video editing engine inside a Docker container. It stays alive as a background service and processes videos on demand.
+This script runs a simple video compilation engine inside a Docker container. It stays alive as a background service and processes videos on demand.
 
 1. **Listen:** It waits for a web request sent to `http://render-engine:5000/render`.
 2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
 3. **Check:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
 4. **Process:** For new or updated CSVs, it trims, rotates, resizes, and saves the source videos as cached clips in the `/data/cache/` folder.
-5. **Combine:** It glues those cached clips together into a finished video, saving it to `/data/dest-videos/` using the exact same name as your CSV.
+5. **Combine:** It glues those cached clips together into a finished video, saving it to `/data/dest-videos/` using the exact same relative path and name as your CSV.
 
 ## Features
 
@@ -48,6 +48,10 @@ I needed a scriptable video rendering solution that:
 ## Installation
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) image is recommended.
+
+1. Create directories on the host machine
+
+    Using your ***standard non-root user***, create the `volumes` directories mentioned in the below `docker-compose.yml` **before** any next steps to ensure they have the correct "1000:1000" permissions for the script to use.
 
 1. Set up the `docker-compose.yml`
 
