@@ -6,7 +6,7 @@ A simple Python-based rendering engine running in Docker that automatically proc
 ## 🚀 Quick Start
 
 1. Configure the `docker-compose.yml` and folders for your system
-2. Copy `process_videos.py` to your `/data/app/` directory
+2. Copy `process_videos.py` to your `/app/` directory
 3. Update your automations to save CSV manifest files to your `/data/manifest/' tree and to trigger the webhook when it makes sense for you
 4. Check the `/data/dest-videos` path to find your automatically compiled videos
 
