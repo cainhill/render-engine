@@ -1,6 +1,10 @@
 # render-engine
 
-A simple Python-based compilation script running in Docker that automatically processes and combines one or more source videos into polished destination videos based on CSV manifest files.
+A script for making compilation videos from one or more source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image.
+
+## 📌 Purpose
+
+When triggered by webhook, this script scans `/data/manifest/` for CSV manifest files that describe how `/data/dest-videos` should be compiled from one or more `/data/src-videos` - applying th needed trim, rotation, and resize effects along the way.
 
 
 ## 💎 Features
@@ -8,19 +12,18 @@ A simple Python-based compilation script running in Docker that automatically pr
 I needed a video compilation script that:
 
 * ✅ Runs in a Dockerised Python environment
-* ✅ Runs as non-root user, 'least privilege' policy
-* ✅ Triggers by webhook
+* ✅ Runs as non-root user
+* ✅ Triggers by webhook and reports back HTTP status
 * ✅ Wraps complicated FFmpeg syntax
-* ✅ Processes one or more manifest CSV inputs
-* ✅ Handles source videos in different formats
+* ✅ Normalises source videos in different formats
 * ✅ Rotates and resizes videos
-* ✅ Outputs meaningful progress to Docker logs
 * ✅ Produces many-to-many videos
 * ✅ Only renders for new or changed manifest CSVs
-* ✅ Uses HTTP status to report success/fail
 
 
 ## ​​🗺️ Getting Started
+
+Check the Installation Steps for detailed setup instructions, but this is a 
 
 1. Create directories on the host machine
 2. Copy `process_videos.py` to your `/data/app/` directory
@@ -29,9 +32,9 @@ I needed a video compilation script that:
 5. Check the `/data/dest-videos/` path to find your automatically compiled videos
 
 
-## 📦 Detailed Installation Steps
+## 📦 Installation Steps
 
-This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) image is recommended.
+This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. 
 
 1. Create directories on the host machine
 
