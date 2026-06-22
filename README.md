@@ -57,6 +57,8 @@ I needed a scriptable video rendering solution that:
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg.
 
+1. Set up the `docker-compose.yml`
+
 ```
 version: '3.8'
 services:
