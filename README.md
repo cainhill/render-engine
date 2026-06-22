@@ -42,13 +42,13 @@ I needed a scriptable video rendering solution that:
 
     Place your CSV manifest files inside the mapped `/data/manifest` path. The CSVs must include headers matching this schema:
 
-```
-source,start_time,end_time,rotation
-a.mp4,0.3,4.0,0
-b.mp4,10,15.5,90
-c.mp4,0,8.5,180
-d.mp4,22,30,270
-```
+    ```
+    source,start_time,end_time,rotation
+    a.mp4,0.3,4.0,0
+    b.mp4,10,15.5,90
+    c.mp4,0,8.5,180
+    d.mp4,22,30,270
+    ```
 
 * **source:** The file name of the video located inside the `/data/src-videos/` directory.
 
