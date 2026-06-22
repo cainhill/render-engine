@@ -1,11 +1,11 @@
 # render-engine
 
-A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on CSV manifest files.
+A simple Python-based compilation script running in Docker that automatically processes and combines one or more source videos into polished destination videos based on CSV manifest files.
 
 
 ## 💎 Features
 
-I needed a scriptable video compilation solution that:
+I needed a video compilation script that:
 
 * ✅ Runs in a Dockerised Python environment
 * ✅ Runs as non-root user, 'least privilege' policy
@@ -20,13 +20,14 @@ I needed a scriptable video compilation solution that:
 * ✅ Uses HTTP status to report success/fail to n8n
 
 
-## ​📌 Summary Installation Steps
+## ​​🗺️ Getting Started
 
 1. Create directories on the host machine
 2. Copy `process_videos.py` to your `/data/app/` directory
 3. Configure and run the `docker-compose.yml`
 4. Update your automations to save CSV manifest files to your `/data/manifest/` tree and to trigger the webhook when it makes sense for you
 5. Check the `/data/dest-videos/` path to find your automatically compiled videos
+
 
 ## 📦 Detailed Installation Steps
 
