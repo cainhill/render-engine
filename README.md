@@ -26,11 +26,11 @@ At a high-level, this script:
 I needed a scriptable video rendering solution that:
 
 * ✅ Runs in a Dockerised Python environment
-* ✅ Acts when webhook triggered by n8n request
+* ✅ Triggers by n8n request
 * ✅ Wraps complicated FFmpeg syntax
 * ✅ Processes one or more manifest CSV inputs
 * ✅ Handles source videos in different formats
-* ✅ Can rotate and resize videos
+* ✅ Rotates and resizes videos
 * ✅ Outputs meaningful progress to Docker logs
 * ✅ Produces many-to-many videos
 * ✅ Only renders for new or changed manifest CSVs
