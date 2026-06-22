@@ -9,7 +9,7 @@ I needed a video compilation script that:
 
 * ✅ Runs in a Dockerised Python environment
 * ✅ Runs as non-root user, 'least privilege' policy
-* ✅ Triggers by n8n request
+* ✅ Triggers by webhook
 * ✅ Wraps complicated FFmpeg syntax
 * ✅ Processes one or more manifest CSV inputs
 * ✅ Handles source videos in different formats
@@ -17,7 +17,7 @@ I needed a video compilation script that:
 * ✅ Outputs meaningful progress to Docker logs
 * ✅ Produces many-to-many videos
 * ✅ Only renders for new or changed manifest CSVs
-* ✅ Uses HTTP status to report success/fail to n8n
+* ✅ Uses HTTP status to report success/fail
 
 
 ## ​​🗺️ Getting Started
@@ -35,7 +35,7 @@ This script is designed to run exclusively within a Docker container environment
 
 1. Create directories on the host machine
 
-    Using your standard non-root user (UID 1000), create the folders for your scripts, manifests, cache, and videos on your host machine. Creating them *before* launching Docker ensures they inherit correct user permissions for the script to work as intended.
+    Using your standard non-root user (UID 1000), create the folders for app, manifests, cache, and videos on your host machine. Creating them *before* launching Docker ensures they inherit correct user permissions for the script to work as intended.
 
 2. Copy `process_videos.py` to your `/data/app/` directory 
 
