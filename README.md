@@ -1,6 +1,6 @@
 # render-engine
 
-A script for making compilation videos from one or more source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image.
+A script for making one or more compilation videos from source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image, which gives the needed Python and FFmpeg dependencies.
 
 
 ## 📌 Purpose
