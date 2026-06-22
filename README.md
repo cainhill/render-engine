@@ -45,6 +45,21 @@ I needed a scriptable video rendering solution that:
     * **start_time / end_time:** Cut boundaries in seconds. Aim for a maximum of 3 decimal places (e.g., `15.593` for millisecond-precision cuts). While the script can read longer numbers without crashing, FFmpeg only really uses 3 decimal places for calculating the nearest video frame.
     * **rotation:** May only be set to one of 0, 90, 180, 270. 0 (no change), 90 (clockwise), 180 (upside down), and 270 (counter-clockwise).
 
+2. Trigger via webhook
+
+    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body—the script automatically scans your local folders and uses file modification dates to figure out what needs to be rendered.
+
+    To trigger a full scan and render, send an empty JSON POST request:
+
+    * **Method:** `POST`
+    * **URL:** `http://render-engine:5000/render`
+    * **Headers:** `Content-Type: application/json`
+    * **Payload:**
+      ```json
+      {}
+      ````
+
+
 ## Installation
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) image is recommended.
