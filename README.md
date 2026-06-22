@@ -8,11 +8,11 @@ This script runs inside a Docker container to trim, resize, rotate, and combine 
 
 At a high-level, it:
 * Waits for an external request to be made to http://render-engine:5000/render
-* Scans the /data/manifest/ tree for any manifest CSV file
+* Scans the `/data/manifest/` tree for any manifest CSV file
 * For each manifest CSV
   * Skips processing this manifest CSV, if the output video already exists and there have been no changes to the manifest CSV since the previous render
-  * Otherwise, trims/resizes/rotates/saves to an intermidary /data/cache/ folder
-  * Then combines the source videos into an output video saved to the /data/dest-videos/ path (using the same relative path and filename as the manifest CSV)
+  * Otherwise, trims/resizes/rotates/saves to an intermidary `/data/cache/` folder
+  * Then combines the source videos into an output video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
 
 ## Reason For Existing
 
