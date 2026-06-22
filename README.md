@@ -38,7 +38,7 @@ This script runs a simple video compilation engine inside a Docker container. It
 
 2. Populate the CSV contents
 
-    Place your CSV manifest files inside the mapped `/data/manifest/` path. You may generate these manually or automatically, but the CSVs must look like this (including the headings):
+    You may generate these manually or automatically, but the CSVs must look like this (including the headings):
 
     ```
     source,start_time,end_time,rotation
