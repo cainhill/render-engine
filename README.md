@@ -14,7 +14,7 @@ Why make this and not use an alternative?
 
 I needed a video compilation script that:
 * ✅ Wraps complicated FFmpeg syntax
-* ✅ Fixes source video inconsistencies before joining
+* ✅ Fixes video inconsistencies before joining
 * ✅ Rotates and resizes videos
 * ✅ Makes videos from one or more source videos
 
