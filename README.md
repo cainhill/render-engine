@@ -1,11 +1,11 @@
 # render-engine
 
-A script for making one or more compilation videos from source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image, which gives the needed Python and FFmpeg dependencies.
+A script for making one or more compilation videos from source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image.
 
 
 ## 📌 Purpose
 
-When triggered by webhook, this script gets video slices from your `/data/src-video/` path and arranges them in one or more compilation videos saved to your `/data/dest-video/` path, according to the instructions you give it in your `/data/manifest/` path.
+When triggered by webhook, this script gets video slices from your `/data/src-video/` path and arranges them in one or more compilation videos saved to your `/data/dest-video/` path, according to the instructions you give by CSV in your `/data/manifest/` path.
 
 
 ## 💎 Features
