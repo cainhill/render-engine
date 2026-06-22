@@ -2,29 +2,15 @@
 
 A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (CSV manifest files).
 
-## Description
+## How It Works
 
-## Description
+This script runs a simple video editing engine inside a Docker container. Instead of running manually, it stays alive as a background service and processes videos on demand.
 
-This script runs a lightweight Python rendering engine inside a Docker container that automates video editing via a Flask webhook API. When an HTTP POST request hits `http://render-engine:5000/render`, the engine scans the `/data/manifest/` directory for CSV files. It automatically skips any manifests where the output video already exists and the CSV hasn't changed. For new or modified files, it processes the entries by slicing, rotating, and resizing source videos into temporary cache clips (`/data/cache/`), before seamlessly combining them into finished 720p videos saved inside the `/data/dest-videos/` directory.
-
-
-This script runs inside a Docker container to trim, resize, rotate, and combine video files.
-
-At a high-level, this script:
-
-1. Waits for an external request to be made to http://render-engine:5000/render
-
-2. Once received, it scans the `/data/manifest/` tree for any CSV manifest file
-
-3. For each CSV
-
-    1. Skips processing this CSV, if the destination video already exists and there have been no changes to the CSV since the previous render
-
-    2. Otherwise, trims/rotates/resizes the source video into a temporary clip saved to the `/data/cache/` folder
-
-    3. Then combines the cached clips into a destination video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
-
+1. **Listen:** It waits for a web request sent to `http://render-engine:5000/render`.
+2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV instruction files.
+3. **Check:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
+4. **Process:** For new or updated manifests, it trims, rotates, and resizes the source videos into a temporary `/data/cache/` folder.
+5. **Combine:** It glues those cached clips together into a finished video, saving it to `/data/dest-videos/` using the exact same name as your CSV.
 
 ## Features
 
