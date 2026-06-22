@@ -40,7 +40,7 @@ I needed a scriptable video rendering solution that:
 
 1. Organise your manifests
 
-    Place your CSV manifest files inside the mapped `/data/manifest` path. The CSVs must look like this (include the headings):
+    Place your CSV manifest files inside the mapped `/data/manifest` path. The CSVs must look like this (including the headings):
 
     ```
     source,start_time,end_time,rotation
