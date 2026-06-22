@@ -26,6 +26,7 @@ At a high-level, this script:
 I needed a scriptable video rendering solution that:
 
 * ✅ Runs in a Dockerised Python environment
+* ✅ Run as non-root user for 'least privilege' policy
 * ✅ Triggers by n8n request
 * ✅ Wraps complicated FFmpeg syntax
 * ✅ Processes one or more manifest CSV inputs
@@ -65,6 +66,7 @@ This script is designed to run exclusively within a Docker container environment
       render-engine:
         container_name: render-engine
         image: eswardudi/python-ffmpeg:latest
+        user: "1000:1000"
         ports:
           - "5000:5000"
         volumes:
