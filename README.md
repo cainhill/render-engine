@@ -109,7 +109,7 @@ I needed a scriptable video rendering solution that:
 * 💡 Enable hardware acceleration
 * 💡 Enable background music additions
 * 💡 Error checking ('start_time > end_time' = error)
-* 💡 Rate limiting
+* 💡 Rate limiting / stop overlap requests
 
 
 ## 🔎 Key Words
