@@ -64,7 +64,11 @@ This script is designed to run exclusively within a Docker container environment
 
     Using your ***standard non-root user***, create the directories shown in the `docker-compose.yml` under the `volumes` key. It is important you do this **before** any next steps to ensure the folders are created with the "1000:1000" permissions needed for the script to run successfully.
 
-1. Set up the `docker-compose.yml`
+2. Set up the `docker-compose.yml`
+
+    * Remember to replace the host paths (on the left side of the `:` symbol under the `volumes` key).
+
+   * Importantly, keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. As a disclaimer, I take no responsibility for any mistakes caused by this script does outside the context of my purposes and you should have a backup-and-restore strategy for you source videos anyway.
 
     ```
     version: '3.8'
@@ -84,6 +88,8 @@ This script is designed to run exclusively within a Docker container environment
         command: python process_videos.py
         restart: always
     ```
+
+    3. Copy `process_videos.py` to your `/data/app/` directory 
 
 
 ## 💎 Features
@@ -114,7 +120,7 @@ I needed a scriptable video rendering solution that:
 
 ## 🔎 Key Words
 
-Video Compilation / FFmpeg / Python / Docker / Web Hook / n8n
+Video Compilation / FFmpeg / Python / Docker / Web Hook / n8n / EDL / Edit Decisions List
 
 
 ## 👍 Related Resources
