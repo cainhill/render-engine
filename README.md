@@ -33,6 +33,10 @@ This script runs a simple video compilation engine inside a Docker container. It
 
     Place your CSV manifest files inside the mapped `/data/manifest/` path. You may generate these manually or automatically, but the CSVs must look like this (including the headings):
 
+    > 💡 **Note:** The file name and relative subfolder path of the CSV dictates the exact path and file name of the finished video. The engine drops the `.csv` extension and replaces it with `.mp4`.
+    > * **Input CSV:** `/data/manifest/holidays/bali_trip.csv`
+    > * **Output MP4:** `/data/dest-videos/holidays/bali_trip.mp4`
+
     ```
     source,start_time,end_time,rotation
     a.mp4,0.328,4.275,0
