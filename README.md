@@ -117,7 +117,8 @@ I needed a scriptable video rendering solution that:
 * 💡 Enable multi-threading
 * 💡 Enable hardware acceleration
 * 💡 Enable background music additions
-* 💡 Error checking ('start_time > end_time' = error)
+* 💡 Logic checks ('start_time > end_time' = error)
+* 💡 Error checks (missing files)
 * 💡 Rate limiting / stop overlap requests
 
 
