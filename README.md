@@ -4,7 +4,7 @@ A simple Python-based rendering engine running in Docker that automatically proc
 
 ## How It Works
 
-This script runs a simple video editing engine inside a Docker container. Instead of running manually, it stays alive as a background service and processes videos on demand.
+This script runs a simple video editing engine inside a Docker container. It stays alive as a background service and processes videos on demand.
 
 1. **Listen:** It waits for a web request sent to `http://render-engine:5000/render`.
 2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
