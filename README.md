@@ -32,7 +32,7 @@ I needed a scriptable video rendering solution that:
 * ✅ Can rotate and resize videos
 * ✅ Outputs meaningful progress to Docker logs
 * ✅ Produces many-to-many videos
-* ✅ Reports success/fail back to n8n via HTTP status
+* ✅ Uses HTTP status to report success/fail to n8n
 
 # Future work / out-of-scope for now
 
