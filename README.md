@@ -7,8 +7,11 @@ A simple Python-based rendering engine running in Docker that automatically proc
 This script runs inside a Docker container to trim, resize, rotate, and combine video files.
 
 At a high-level, this script:
+
 1. Waits for an external request to be made to http://render-engine:5000/render
+
 2. Once received, it scans the `/data/manifest/` tree for any manifest CSV file
+
 3. For each manifest CSV
   * Skips processing this manifest CSV, if the output video already exists and there have been no changes to the manifest CSV since the previous render
   * Otherwise, trims/resizes/rotates/saves to an intermidary `/data/cache/` folder
