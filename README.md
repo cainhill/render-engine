@@ -2,6 +2,7 @@
 
 A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (EDL files in CSV format).
 
+
 ## Description
 
 This script runs inside a Docker container to trim, resize, rotate, and combine video files.
@@ -20,6 +21,7 @@ At a high-level, this script:
 
     3. Then combines the source videos into a destination video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
 
+
 ## Features
 
 I needed a scriptable video rendering solution that:
@@ -33,6 +35,7 @@ I needed a scriptable video rendering solution that:
 * ✅ Outputs meaningful progress to Docker logs
 * ✅ Produces many-to-many videos
 * ✅ Uses HTTP status to report success/fail to n8n
+
 
 ## Installation
 
@@ -56,11 +59,13 @@ services:
     restart: always
 ```
 
+
 ## Future work
 
 * 💡 Enable multi-threading
 * 💡 Enable hardware acceleration
 * 💡 Enable background music additions
+
 
 ## Related resources
 
