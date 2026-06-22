@@ -50,7 +50,7 @@ services:
       - "5000:5000"
     volumes:
       - </path/to/your/script/dir>:/app:ro
-      - </path/to/your/data/dir>:/data:rw
+      - </path/to/your/manifest/dir>:/data/manifest:rw
       - </path/to/your/source/videos>:/data/src-videos:ro
       - </path/to/your/destination/videos>:/data/dest-videos:rw
     working_dir: /app
