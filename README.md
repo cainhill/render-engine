@@ -33,6 +33,7 @@ I needed a scriptable video rendering solution that:
 * ✅ Can rotate and resize videos
 * ✅ Outputs meaningful progress to Docker logs
 * ✅ Produces many-to-many videos
+* ✅ Only re-renders when if manifest CSV is changed
 * ✅ Uses HTTP status to report success/fail to n8n
 
 
