@@ -49,7 +49,7 @@ I needed a scriptable video rendering solution that:
     c.mp4,0,8.5,180
     d.mp4,22,30,270
     ```
-    * **source:** The file name of the video located inside the `/data/src-videos/` directory.
+    * **source:** The file path of the video relative to the `/data/src-videos/` directory. e.g. If 'a.mp4' if provided, the script will search for 'data/src-videos/a.mp4' for processing.
     * **start_time:** Cut boundaries in seconds.
     * **end_time:** Cut boundaries in seconds.
     * **rotation:** May only be set to one of 0, 90, 180, 270. 0 (no change), 90 (clockwise), 180 (upside down), and 270 (counter-clockwise).
