@@ -34,7 +34,7 @@ I needed a scriptable video rendering solution that:
 * ✅ Produces many-to-many videos
 * ✅ Uses HTTP status to report success/fail to n8n
 
-# Future work / out-of-scope for now
+## Future work
 
 * 💡 Enable multi-threading
 * 💡 Enable hardware acceleration
