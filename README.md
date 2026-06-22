@@ -50,11 +50,8 @@ I needed a scriptable video rendering solution that:
     d.mp4,22,30,270
     ```
     * **source:** The file name of the video located inside the `/data/src-videos/` directory.
-
     * **start_time:** Cut boundaries in seconds.
-
     * **end_time:** Cut boundaries in seconds.
-
     * **rotation:** May only be set to one of 0, 90, 180, 270. 0 (no change), 90 (clockwise), 180 (upside down), and 270 (counter-clockwise).
 
 ## Installation
