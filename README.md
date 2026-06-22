@@ -1,6 +1,6 @@
 # render-engine
 
-A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (CSV manifest files).
+A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on CSV manifest files.
 
 
 ## 🚀 Quick Start
