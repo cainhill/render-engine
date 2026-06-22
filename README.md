@@ -34,6 +34,28 @@ I needed a scriptable video rendering solution that:
 * ✅ Produces many-to-many videos
 * ✅ Uses HTTP status to report success/fail to n8n
 
+## Installation
+
+This sceipt is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg.
+
+```
+version: '3.8'
+services:
+  render-engine:
+    container_name: render-engine
+    image: eswardudi/python-ffmpeg:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - </path/to/your/script/dir>:/app:ro
+      - </path/to/your/data/dir>:/data:rw
+      - </path/to/your/source/videos>:/data/src-videos:ro
+      - </path/to/your/destination/videos>:/data/dest-videos:rw
+    working_dir: /app
+    command: python process_videos.py
+    restart: always
+```
+
 ## Future work
 
 * 💡 Enable multi-threading
