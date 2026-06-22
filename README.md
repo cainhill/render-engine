@@ -47,7 +47,7 @@ I needed a scriptable video rendering solution that:
 
 2. Trigger via webhook
 
-    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body—the script automatically scans your local folders and uses file modification dates to figure out what needs to be rendered.
+    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifest/` tree and uses file modification dates to figure out new/changed CSVs that need to be rendered.
 
     To trigger a full scan and render, send an empty JSON POST request:
 
