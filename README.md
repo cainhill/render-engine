@@ -5,7 +5,7 @@ A script for making compilation videos from one or more source videos. Runs insi
 
 ## 📌 Purpose
 
-When triggered by webhook, this script gets video slices from your `/data/src-video` path and arranges them in one or more compilation videos saved to your `/data/dest-video` path, according to the instructions you give it in your `/data/manifest/` path.
+When triggered by webhook, this script gets video slices from your `/data/src-video/` path and arranges them in one or more compilation videos saved to your `/data/dest-video/` path, according to the instructions you give it in your `/data/manifest/` path.
 
 
 ## 💎 Features
