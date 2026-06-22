@@ -1,6 +1,6 @@
 # render-engine
 
-A script for making one or more compilation videos from source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image.
+A script for making one or more compilation videos from source videos.
 
 
 ## 📌 Purpose
@@ -14,12 +14,17 @@ I needed a video compilation script that:
 
 * ✅ Runs in a Dockerised Python environment
 * ✅ Runs as non-root user
-* ✅ Triggers by webhook and reports back HTTP status
+* ✅ Triggers by webhook and reports HTTP status
 * ✅ Wraps complicated FFmpeg syntax
 * ✅ Normalises source videos in different formats
 * ✅ Rotates and resizes videos
 * ✅ Produces many-to-many videos
 * ✅ Only renders for new or changed manifest CSVs
+
+
+## 🧱 Dependencies
+
+The script must be run from within this excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image that provides the required Python and FFmpeg for video automation. Setup instructions are detailed further.
 
 
 ## ​​🗺️ Getting Started
