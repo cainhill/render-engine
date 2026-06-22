@@ -20,18 +20,27 @@ At a high-level, this script:
 
     3. Then combines the source videos into a destination video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
 
-## Reason for existing
+## Features
 
 I needed a scriptable video rendering solution that:
 
-* ✅ Runs in a Python environment
-* ✅ Produces many-to-many videos
+* ✅ Runs in a Dockerised Python environment
+* ✅ Acts when webhook triggered by n8n request
+* ✅ Wraps complicated FFmpeg syntax
 * ✅ Processes one or more manifest CSV inputs
-* ✅ Runs within a Docker container
 * ✅ Handles source videos in different formats
-* ✅ Acts when triggered by n8n request
- 
-## Resources & References
+* ✅ Can rotate and resize videos
+* ✅ Outputs meaningful progress to Docker logs
+* ✅ Produces many-to-many videos
+* ✅ Reports success/fail back to n8n via HTTP status
+
+# Future work / out-of-scope for now
+
+* 💡 Enable multi-threading
+* 💡 Enable hardware acceleration
+* 💡 Enable background music additions
+
+## Related resources
 
 Before creating this, I reviewed these resources and alternative solutions:
 
