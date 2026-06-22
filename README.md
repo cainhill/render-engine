@@ -22,13 +22,13 @@ At a high-level, this script:
 
 ## Reason for existing
 
-* I needed a programatic video rendering solution
-* Written in Python with minimal dependencies
-* That could produce many-to-many videos
-* Based on one or more manifest CSV inputs
-* That could run within a Docker container
-* That could handle source videos in different formats
-* That n8n could trigger by webhook
+I needed a programatic video rendering solution that:
+* Runs in a Python environment with minimal dependencies
+* Produces many-to-many videos
+* Processes one or more manifest CSV inputs
+* Runs within a Docker container
+* Handles source videos in different formats
+* Acts when triggered by n8n request
 
 ## Resources & References
 
