@@ -36,4 +36,4 @@ Before creating this, I reviewed these resources and alternative solutions:
 
 * [AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
 * [pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg)
-* *l[kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
+* [kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
