@@ -23,7 +23,7 @@ At a high-level, this script:
 ## Reason for existing
 
 I needed a programatic video rendering solution that:
-* Runs in a Python environment with minimal dependencies
+* Runs in a Python environment
 * Produces many-to-many videos
 * Processes one or more manifest CSV inputs
 * Runs within a Docker container
