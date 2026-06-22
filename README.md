@@ -83,8 +83,9 @@ This script is designed to run exclusively within a Docker container environment
           - "5000:5000"
         volumes:
           - </path/to/your/script/dir>:/app:ro
-          - </path/to/your/manifest/dir>:/data/manifest:rw
+          - </path/to/your/manifest/dir>:/data/manifest:ro
           - </path/to/your/source/videos>:/data/src-videos:ro
+          - </path/to/your/cache/dir>:/data/cache:rw
           - </path/to/your/destination/videos>:/data/dest-videos:rw
         working_dir: /app
         command: python process_videos.py
