@@ -36,7 +36,7 @@ I needed a scriptable video rendering solution that:
 
 ## Installation
 
-This sceipt is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg.
+This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg.
 
 ```
 version: '3.8'
