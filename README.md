@@ -34,6 +34,6 @@ At a high-level, this script:
 
 Before creating this, I reviewed these resources and alternative solutions:
 
-* **[AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/):** An invaluable repository of FFmpeg command-line scripts and logic blueprints maintained by the Association of Moving Image Archivists, designed to illustrate specific data manipulation techniques.
-* **[pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg):** An experimental Node/TypeScript command-line tool that translates complex multi-track JSON video descriptions (including cross-fades and positional scaling transformations) into standard FFmpeg filtergraphs.
-* **[kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl):** A Python pipeline wrapper that ingests a tab-separated value (TSV) Edit Decision List to automate segment slicing, tagging, and batch-transcoding chunks via sequential configuration scripts.
+* **[AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
+* **[pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg)
+* **[kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
