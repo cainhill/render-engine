@@ -2,9 +2,10 @@
 
 A script for making compilation videos from one or more source videos. Runs inside the excellent [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker image.
 
+
 ## 📌 Purpose
 
-When triggered by webhook, this script scans `/data/manifest/` for CSV manifest files that describe how `/data/dest-videos` should be compiled from one or more `/data/src-videos` - applying th needed trim, rotation, and resize effects along the way.
+When triggered by webhook, this script gets video slices from your `/data/src-video` path and arranges them in one or more compilation videos saved to your `/data/dest-video` path, according to the instructions you give it in your `/data/manifest/` path.
 
 
 ## 💎 Features
