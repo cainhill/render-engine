@@ -1,6 +1,6 @@
 # render-engine
 
-A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (EDL files in CSV format).
+A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (CSV manifest files).
 
 ## Description
 
@@ -10,15 +10,15 @@ At a high-level, this script:
 
 1. Waits for an external request to be made to http://render-engine:5000/render
 
-2. Once received, it scans the `/data/manifest/` tree for any manifest CSV file
+2. Once received, it scans the `/data/manifest/` tree for any CSV manifest file
 
-3. For each manifest CSV
+3. For each CSV
 
-    1. Skips processing this manifest CSV, if the destination video already exists and there have been no changes to the manifest CSV since the previous render
+    1. Skips processing this CSV, if the destination video already exists and there have been no changes to the CSV since the previous render
 
-    2. Otherwise, trims/resizes/rotates/saves to an intermidary `/data/cache/` folder
+    2. Otherwise, trims/rotates/resizes the source video into a temporary clip saved to the `/data/cache/` folder
 
-    3. Then combines the source videos into a destination video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
+    3. Then combines the cached clips into a destination video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
 
 
 ## Features
@@ -36,6 +36,27 @@ I needed a scriptable video rendering solution that:
 * ✅ Only renders for new or changed manifest CSVs
 * ✅ Uses HTTP status to report success/fail to n8n
 
+## Usage
+
+1. Organise your manifests
+
+Place your CSV manifest files inside the mapped `/data/manifest` path. The CSVs must include headers matching this schema:
+
+```
+source,start_time,end_time,rotation
+a.mp4,0.3,4.0,0
+b.mp4,10,15.5,90
+c.mp4,0,8.5,180
+d.mp4,22,30,270
+```
+
+* **source:** The file name of the video located inside the `/data/src-videos/` directory.
+
+* **start_time:** Cut boundaries in seconds.
+
+* **end_time:** Cut boundaries in seconds.
+
+* **rotation:** May only be set to one of: 0 (no change), 90 (clockwise), 180 (upside down), and 270 (counter-clockwise).
 
 ## Installation
 
