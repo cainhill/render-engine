@@ -4,6 +4,11 @@ A simple Python-based rendering engine running in Docker that automatically proc
 
 ## Description
 
+## Description
+
+This script runs a lightweight Python rendering engine inside a Docker container that automates video editing via a Flask webhook API. When an HTTP POST request hits `http://render-engine:5000/render`, the engine scans the `/data/manifest/` directory for CSV files. It automatically skips any manifests where the output video already exists and the CSV hasn't changed. For new or modified files, it processes the entries by slicing, rotating, and resizing source videos into temporary cache clips (`/data/cache/`), before seamlessly combining them into finished 720p videos saved inside the `/data/dest-videos/` directory.
+
+
 This script runs inside a Docker container to trim, resize, rotate, and combine video files.
 
 At a high-level, this script:
