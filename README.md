@@ -95,7 +95,8 @@ This script is designed to run exclusively within a Docker container environment
 * 💡 Enable multi-threading
 * 💡 Enable hardware acceleration
 * 💡 Enable background music additions
-* 💡 Error checking ('start_time > end_time')
+* 💡 Error checking ('start_time > end_time' = error)
+* 💡 Rate limiting
 
 
 ## Related resources
