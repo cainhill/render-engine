@@ -82,6 +82,7 @@ services:
 * 💡 Enable multi-threading
 * 💡 Enable hardware acceleration
 * 💡 Enable background music additions
+* 💡 Error checking ('start_time > end_time')
 
 
 ## Related resources
