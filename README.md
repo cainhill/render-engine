@@ -47,7 +47,7 @@ I needed a scriptable video rendering solution that:
 
 ## Installation
 
-This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The `eswardudi/python-ffmpeg` image is recommended.
+This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) image is recommended.
 
 1. Set up the `docker-compose.yml`
 
