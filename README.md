@@ -22,9 +22,9 @@ This script runs a simple video compilation engine inside a Docker container. It
 
 ## 📋 Usage
 
-1. Organise your manifests
+1. Organise your CSV manifest files
 
-    Place your CSV manifest files inside the mapped `/data/manifest/` path. The CSVs must look like this (including the headings):
+    Place your CSV manifest files inside the mapped `/data/manifest/` path. You may generate these manually or automatically, but the CSVs must look like this (including the headings):
 
     ```
     source,start_time,end_time,rotation
@@ -56,7 +56,7 @@ This script runs a simple video compilation engine inside a Docker container. It
     The script will keep n8n waiting until the render is complete, and return a 200 OK JSON response upon completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
 
 
-## ⬇️ Installation
+## ​📦 Installation
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) image is recommended.
 
@@ -86,7 +86,7 @@ This script is designed to run exclusively within a Docker container environment
     ```
 
 
-## Features
+## 💎 Features
 
 I needed a scriptable video rendering solution that:
 
@@ -103,7 +103,7 @@ I needed a scriptable video rendering solution that:
 * ✅ Uses HTTP status to report success/fail to n8n
 
 
-## Future Work
+## 🔮 Future Work
 
 * 💡 Enable multi-threading
 * 💡 Enable hardware acceleration
@@ -124,3 +124,7 @@ Before creating this, I reviewed these resources and alternative solutions:
 * [AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
 * [pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg)
 * [kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
+
+## 🎨 License
+
+Usage is provided under the MIT License. See LICENSE for the full details.
