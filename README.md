@@ -17,10 +17,14 @@ A simple Python-based rendering engine running in Docker that automatically proc
 This script runs a simple video compilation engine inside a Docker container. It stays alive as a background service and processes videos on demand.
 
 1. **Listen:** It waits for a web request sent to `http://render-engine:5000/render`.
+
 2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
+
 3. **Check:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
+
 4. **Process:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
-5. **Combine:** It glues those cached clips together into a finished video, saving it to `/data/dest-videos/` using the exact same relative path and name as your CSV.
+
+5. **Combine:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
 
 ## 📋 Usage
