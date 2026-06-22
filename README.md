@@ -51,7 +51,7 @@ This script is designed to run exclusively within a Docker container environment
 
 1. Create directories on the host machine
 
-    Using your ***standard non-root user***, create the `volumes` directories mentioned in the below `docker-compose.yml` **before** any next steps to ensure they have the correct "1000:1000" permissions for the script to use.
+    Using your ***standard non-root user***, create the directories shown in the `docker-compose.yml` under the `volumes` key. It is important you do this **before** any next steps to ensure the folders are created with the "1000:1000" permissions needed for the script to run successfully.
 
 1. Set up the `docker-compose.yml`
 
