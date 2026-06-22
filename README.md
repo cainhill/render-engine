@@ -18,7 +18,7 @@ At a high-level, this script:
 
     2. Otherwise, trims/resizes/rotates/saves to an intermidary `/data/cache/` folder
 
-    3. Then combines the source videos into an output video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
+    3. Then combines the source videos into a destination video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
 
 ## Reason for existing
 
