@@ -5,7 +5,7 @@ A simple Python-based rendering engine running in Docker that automatically proc
 
 ## 💎 Features
 
-I needed a scriptable video rendering solution that:
+I needed a scriptable video compilation solution that:
 
 * ✅ Runs in a Dockerised Python environment
 * ✅ Runs as non-root user, 'least privilege' policy
