@@ -1,8 +1,7 @@
 # render-engine
 
 A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (EDL files in CSV format).
-
-
+ 
 ## Description
 
 This script runs inside a Docker container to trim, resize, rotate, and combine video files.
