@@ -7,9 +7,9 @@ A simple Python-based rendering engine running in Docker that automatically proc
 This script runs a simple video editing engine inside a Docker container. Instead of running manually, it stays alive as a background service and processes videos on demand.
 
 1. **Listen:** It waits for a web request sent to `http://render-engine:5000/render`.
-2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV instruction files.
+2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
 3. **Check:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
-4. **Process:** For new or updated manifests, it trims, rotates, and resizes the source videos into a temporary `/data/cache/` folder.
+4. **Process:** For new or updated CSVs, it trims, rotates, resizes, and saves the source videos as cached clips in the `/data/cache/` folder.
 5. **Combine:** It glues those cached clips together into a finished video, saving it to `/data/dest-videos/` using the exact same name as your CSV.
 
 ## Features
