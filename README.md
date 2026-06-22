@@ -49,7 +49,6 @@ I needed a scriptable video rendering solution that:
     c.mp4,0,8.5,180
     d.mp4,22,30,270
     ```
-
     * **source:** The file name of the video located inside the `/data/src-videos/` directory.
 
     * **start_time:** Cut boundaries in seconds.
