@@ -14,11 +14,11 @@ At a high-level, this script:
 
 3. For each manifest CSV
 
-      a. Skips processing this manifest CSV, if the output video already exists and there have been no changes to the manifest CSV since the previous render
+    a. Skips processing this manifest CSV, if the output video already exists and there have been no changes to the manifest CSV since the previous render
 
-      b. Otherwise, trims/resizes/rotates/saves to an intermidary `/data/cache/` folder
+    b. Otherwise, trims/resizes/rotates/saves to an intermidary `/data/cache/` folder
 
-      c. Then combines the source videos into an output video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
+    c. Then combines the source videos into an output video saved to the `/data/dest-videos/` path (using the same relative path and filename as the manifest CSV)
 
 ## Reason For Existing
 
