@@ -3,7 +3,13 @@
 A simple Python-based rendering engine running in Docker that automatically processes and combines one or more source videos into polished destination videos based on instruction lists (CSV manifest files).
 
 
-## How It Works
+## 🚀 Quick Start
+
+1. Set up the Docker container and folders
+2. Copy `process_videos.py` to your `/data/app/` directory
+
+
+## ⚙️ How It Works
 
 This script runs a simple video compilation engine inside a Docker container. It stays alive as a background service and processes videos on demand.
 
@@ -13,7 +19,8 @@ This script runs a simple video compilation engine inside a Docker container. It
 4. **Process:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
 5. **Combine:** It glues those cached clips together into a finished video, saving it to `/data/dest-videos/` using the exact same relative path and name as your CSV.
 
-## Usage
+
+## 📋 Usage
 
 1. Organise your manifests
 
@@ -49,7 +56,7 @@ This script runs a simple video compilation engine inside a Docker container. It
     The script will keep n8n waiting until the render is complete, and return a 200 OK JSON response upon completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
 
 
-## Installation
+## ⬇️ Installation
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. The [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) image is recommended.
 
@@ -105,7 +112,12 @@ I needed a scriptable video rendering solution that:
 * 💡 Rate limiting
 
 
-## Related Resources
+## 🔎 Key Words
+
+Video Compilation / FFmpeg / Python / Docker / Web Hook / n8n
+
+
+## 👍 Related Resources
 
 Before creating this, I reviewed these resources and alternative solutions:
 
