@@ -5,10 +5,11 @@ A simple Python-based rendering engine running in Docker that automatically proc
 
 ## 🚀 Quick Start
 
-1. Configure the `docker-compose.yml` and folders for your system
+1. Create the required folders
 2. Copy `process_videos.py` to your `/app/` directory
-3. Update your automations to save CSV manifest files to your `/data/manifest/' tree and to trigger the webhook when it makes sense for you
-4. Check the `/data/dest-videos` path to find your automatically compiled videos
+3. Configure and run the `docker-compose.yml` for your system
+4. Update your automations to save CSV manifest files to your `/data/manifest/' tree and to trigger the webhook when it makes sense for you
+5. Check the `/data/dest-videos` path to find your automatically compiled videos
 
 
 ## ⚙️ How It Works
@@ -64,7 +65,7 @@ This script is designed to run exclusively within a Docker container environment
 
 1. Create directories on the host machine
 
-    Using your ***standard non-root user***, create the directories shown in the `docker-compose.yml` under the `volumes` key. It is important you do this **before** any next steps to ensure the folders are created with the "1000:1000" permissions needed for the script to run successfully.
+    Using your standard non-root user (UID 1000), create the folders for your scripts, manifests, cache, and videos on your host machine. Creating them *before* launching Docker ensures they inherit correct user permissions for the script to work as intended.
 
 2. Set up the `docker-compose.yml`
 
@@ -134,6 +135,7 @@ Before creating this, I reviewed these resources and alternative solutions:
 * [AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
 * [pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg)
 * [kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
+
 
 ## 🎨 License
 
