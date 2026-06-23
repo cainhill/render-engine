@@ -50,7 +50,7 @@ This script is designed to run exclusively within a Docker container environment
 
 1. **Create directories on the host machine**
 
-    Using your standard non-root user (UID 1000), create the folders for app, manifests, cache, and videos on your host machine. Creating them *before* launching Docker ensures they inherit correct user permissions for the script to work as intended.
+    Using your standard non-root user (UID 1000), create the folders for app, manifests, cache, and videos on your host machine. Creating them ***before*** launching Docker ensures they inherit correct user permissions for the script to work as intended.
 
 2. **Copy `process_videos.py` to your `/data/app/` directory**
 
