@@ -22,7 +22,7 @@ With some more specific needs:
 * ✅ Runs in a Dockerised Python environment
 * ✅ Runs as non-root user
 * ✅ Triggers by webhook and reports HTTP status
-* ✅ Only renders a video if inputs are new or changed
+* ✅ Only renders a video if input is new or changed
 
 
 ## 🧱 Dependencies
