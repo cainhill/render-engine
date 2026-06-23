@@ -110,10 +110,7 @@ This script is designed to run exclusively within a Docker container environment
     * **Method:** `POST`
     * **URL:** `http://render-engine:5000/render`
     * **Headers:** `Content-Type: application/json`
-    * **Payload:**
-      ```json
-      {}
-      ````
+    * **Payload:** `{}`
 
 4. Video compilation
 
