@@ -16,7 +16,7 @@ I needed a video compilation script that:
 * ✅ Makes videos from one or more source videos
 * ✅ Fixes video inconsistencies before joining
 * ✅ Rotates and resizes videos
-* ✅ Simplifies the underlying commands (FFmpeg)
+* ✅ Simplifies the underlying commands
 
 With some more specific needs:
 * ✅ Runs in a Dockerised Python environment
