@@ -60,7 +60,7 @@ This script is designed to run exclusively within a Docker container environment
 
     * **Host paths:** Replace the host paths (on the left side of the `:` symbol under the `volumes` key).
 
-    * **Read-only source videos:** Keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. This is a small precaution, ***but it remains your responsibility to test this script on a small sample and to have a backup-and-restore strategy for your source videos***.
+    * **Read-only source videos:** Keep the `:ro` attached to the `/data/src-videos` to ensure this script has read-only access to your source videos. This is a small precaution, ***but it remains your responsibility to test this script on a small sample and to have a backup-and-restore strategy for your source videos***.
 
       ```yaml
       version: '3.8'
@@ -91,7 +91,7 @@ You can configure the video output quality, service ports, and system paths by p
 | Variable | Description | Default | Options |
 | :--- | :--- | :--- | :--- |
 | `OUTPUT_RESOLUTION` | Target dimensions for the compiled video. | `1280x720` | `1920x1080`, `1280x720` |
-| `OUTPUT_FPS` | Standardizes the output frame rate. | `30` | `24`, `30`, `60` |
+| `OUTPUT_FPS` | Standardises the output frame rate. | `30` | `24`, `30`, `60` |
 
 <br />
 
