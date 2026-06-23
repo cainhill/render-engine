@@ -44,13 +44,13 @@ To create your compilation videos, this script:
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg , which you will need to set up with the following steps.
 
-1. Create directories on the host machine
+**1. Create directories on the host machine**
 
     Using your standard non-root user (UID 1000), create the folders for app, manifests, cache, and videos on your host machine. Creating them *before* launching Docker ensures they inherit correct user permissions for the script to work as intended.
 
-2. Copy `process_videos.py` to your `/data/app/` directory 
+**2. Copy `process_videos.py` to your `/data/app/` directory**
 
-3. Configure and run the `docker-compose.yml`
+**3. Configure and run the `docker-compose.yml`**
 
     * Remember to replace the host paths (on the left side of the `:` symbol under the `volumes` key).
 
