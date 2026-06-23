@@ -88,13 +88,10 @@ This script is designed to run exclusively within a Docker container environment
 
 You can configure the video output quality, service ports, and system paths by passing the following environment variables into the Docker container:
 
-| Variable | Description | Default | Options / Valid Values |
+| Variable | Description | Default | Options |
 | :--- | :--- | :--- | :--- |
 | `OUTPUT_RESOLUTION` | Target dimensions for the compiled video. | `1280x720` | `1920x1080`, `1280x720` |
 | `OUTPUT_FPS` | Standardizes the output frame rate. | `30` | `24`, `30`, `60` |
-| `CRF_QUALITY` | Constant Rate Factor (H.264 compression quality). | `23` | `18` (High) to `28` (Low) |
-| `PRESET_SPEED` | FFmpeg compression speed-to-size trade-off. | `medium` | `ultrafast`, `veryfast`, `medium`, `slow` |
-| `PORT` | The internal network port the webhook listens on. | `5000` | Any valid open port number |
 
 <br />
 
