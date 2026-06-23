@@ -86,7 +86,7 @@ This script is designed to run exclusively within a Docker container environment
 
 ## ⚙️ Environment Variables
 
-You can configure the video output quality, service ports, and system paths by passing the following environment variables into the Docker container:
+You can configure the video output rewolution and frames per second (FPS) by passing the following environment variables into the Docker container:
 
 | Variable | Description | Default | Options |
 | :--- | :--- | :--- | :--- |
