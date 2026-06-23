@@ -56,11 +56,11 @@ This script is designed to run exclusively within a Docker container environment
 
 3. **Configure and run the `docker-compose.yml`**
 
-    * Remember to replace the host paths (on the left side of the `:` symbol under the `volumes` key).
+    Edit the following configuration to be true for your system.
 
-    * Importantly, keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos.
+    * **Host paths:** Replace the host paths (on the left side of the `:` symbol under the `volumes` key).
 
-    * It is your responsibility to test this script on a small sample and to have a backup-and-restore strategy for you source videos.
+    * **Read-only source videos:** Keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. This is a dmall precaution, ***it remains your responsibility to test this script on a small sample and to have a backup-and-restore strategy for you source videos more broadly***.
 
       ```
       version: '3.8'
