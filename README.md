@@ -28,7 +28,7 @@ With some more specific needs:
 
 <br />
 
-## ⚙️ What It Does
+## ​🎬 What It Does
 
 To create your compilation videos, this script:
 
