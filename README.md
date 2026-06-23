@@ -90,7 +90,7 @@ You can configure the video output rewolution and frames per second (FPS) by pas
 
 | Variable | Description | Default | Options |
 | :--- | :--- | :--- | :--- |
-| `OUTPUT_RESOLUTION` | Target dimensions for the compiled video. | `1280x720` | `1920x1080`, `1280x720` |
+| `OUTPUT_RESOLUTION` | Target dimensions for the compiled videos. | `1280x720` | `1920x1080`, `1280x720` |
 | `OUTPUT_FPS` | Standardises the output frame rate. | `30` | `24`, `30`, `60` |
 
 <br />
