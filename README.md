@@ -25,8 +25,9 @@ With some more specific needs:
 * 📐 Runs as non-root user
 * 📐 Triggers by webhook and reports HTTP status
 * 📐 Only renders a video if input is new or changed
- 
- 
+
+<br />
+
 ## ⚙️ What It Does
 
 To create your compilation videos, this script:
@@ -40,8 +41,9 @@ To create your compilation videos, this script:
 4. **Processes:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
 
 5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
- 
- 
+
+<br / >
+
 ## 📦 Installation Steps
 
 This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg , which you will need to set up with the following steps.
@@ -77,8 +79,9 @@ This script is designed to run exclusively within a Docker container environment
           command: python process_videos.py
           restart: always
       ```
- 
- 
+
+<br />
+
 ## 📋 Usage
 
 1. **Name and organise your CSV manifest files**
