@@ -29,7 +29,7 @@ With some more specific needs:
 
 This page outlines how to setup these dependencies:
 
-* Docker container with Python/FFmpeg [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)
+* [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker container (gives Python/FFmpeg)
 * Mapped folders (see `docker-compose.yml`)
 
 
