@@ -27,8 +27,9 @@ With some more specific needs:
 
 ## 🧱 Dependencies
 
-The script must be:
-* Run within this excellent Docker image ([eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)), which provides the Python and FFmpeg needed for video automation.
+For best results, run this script:
+* Within this excellent Docker image ([eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)), which provides the Python and FFmpeg needed for video automation.
+* With access to the directories mentioned in the `docker-compose.yml` further down this page.
 
 
 ## ​​🗺️ Getting Started
