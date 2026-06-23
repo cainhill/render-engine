@@ -46,7 +46,7 @@ To create your compilation videos, this script:
 
 ## 📦 Installation Steps
 
-This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg , which you will need to set up with the following steps.
+This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg, which you will need to set up with the following steps.
 
 1. **Create directories on the host machine**
 
