@@ -119,8 +119,10 @@ This script is designed to run exclusively within a Docker container environment
 
 ## 🧰 Use Cases
 
-* Family Videos
+* **Family Memories Pipeline**
+
   * **Scenario:** I want to automatically compile video montages from our family videos.
+
   * **Tooling:** I use an n8n workflow to tell `render-engine` which Immich family videos to compile into montage videos.
 
 
