@@ -173,6 +173,7 @@ Video Compilation / FFmpeg / Python / Docker / Web Hook / n8n / EDL / Edit Decis
 
 Before creating this, I reviewed these resources and alternative solutions:
 
+* [robinrj6 / FFmpeg-batch](https://github.com/robinrj6/FFmpeg-batch)
 * [AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
 * [pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg)
 * [kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
