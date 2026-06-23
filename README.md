@@ -6,7 +6,7 @@ An automated video compilation script designed to run exclusively within an [esw
 
 ## 📌 Purpose
 
-When triggered by webhook, this script copies slices from videos in your `/data/src-video/` path and arranges them in one or more compilation videos, saving to your `/data/dest-video/` path according to the instructions you give it using CSV in your `/data/manifest/` path.
+When triggered by webhook, this script copies slices from videos in your `/data/src-videos/` path and arranges them in one or more compilation videos, saving to your `/data/dest-videos/` path according to the instructions you give it using CSV in your `/data/manifests/` path.
 
 <br />
 
@@ -34,13 +34,13 @@ To create your compilation videos, this script:
 
 1. **Listens:** It waits for a web request sent to `http://render-engine:5000/render`.
 
-2. **Scans:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
+2. **Scans:** Once triggered, it looks inside `/data/manifests/` for your CSV manifest files.
 
 3. **Checks:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
 
 4. **Processes:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
 
-5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
+5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifest/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
 <br />
 
@@ -110,7 +110,7 @@ This script is designed to run exclusively within a Docker container environment
 
 3. **Trigger via webhook**
 
-    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifest/` tree and uses file modification dates to figure out new/changed CSVs that need to be rendered.
+    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifests/` tree and uses file modification dates to figure out new/changed CSVs that need to be rendered.
 
     To trigger a full scan and render, send an empty JSON POST request:
 
