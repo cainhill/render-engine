@@ -62,7 +62,7 @@ This script is designed to run exclusively within a Docker container environment
 
     * **Read-only source videos:** Keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. This is a small precaution, ***it remains your responsibility to test this script on a small sample and to have a backup-and-restore strategy for your source videos***.
 
-      ```
+      ```yaml
       version: '3.8'
       services:
         render-engine:
@@ -80,7 +80,7 @@ This script is designed to run exclusively within a Docker container environment
           working_dir: /app
           command: python process_videos.py
           restart: always
-      ```yaml
+      ```
 
 <br />
 
