@@ -19,10 +19,10 @@ I needed a video compilation script that:
 * ✅ Simplifies the underlying commands
 
 With some more specific needs:
-* ✅ Runs in a Dockerised Python environment
-* ✅ Runs as non-root user
-* ✅ Triggers by webhook and reports HTTP status
-* ✅ Only renders a video if input is new or changed
+* 📐 Runs in a Dockerised Python environment
+* 📐 Runs as non-root user
+* 📐 Triggers by webhook and reports HTTP status
+* 📐 Only renders a video if input is new or changed
 
 
 ## ​​🗺️ Getting Started
