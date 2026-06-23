@@ -34,7 +34,7 @@ To create your compilation videos, this script:
 
 1. **Listens:** It waits for a web request sent to `http://render-engine:5000/render`.
 
-2. **Scans:** Once triggered, it looks inside `/data/manifests/` for your CSV manifest files.
+2. **Scans:** Once triggered, it looks inside `/data/manifests/` for your CSV manifests.
 
 3. **Checks:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
 
@@ -73,7 +73,7 @@ This script is designed to run exclusively within a Docker container environment
             - "5000:5000"
           volumes:
             - </path/to/your/script/dir>:/app:ro
-            - </path/to/your/manifest/dir>:/data/manifest:ro
+            - </path/to/your/manifests/dir>:/data/manifests:ro
             - </path/to/your/source/videos>:/data/src-videos:ro
             - </path/to/your/cache/dir>:/data/cache:rw
             - </path/to/your/destination/videos>:/data/dest-videos:rw
@@ -86,11 +86,11 @@ This script is designed to run exclusively within a Docker container environment
 
 ## 📋 Usage
 
-1. **Name and organise your CSV manifest files**
+1. **Name and organise your CSV manifests**
 
     The file name and relative subfolder path you choose for your CSV dictates the exact path and file name of the finished video. The engine automatically drops the `.csv` extension and replaces it with `.mp4` when saving to the `/data/dest-videos/` tree.
     
-    * **Example CSV Manifest:** `/data/manifest/holidays/bali_trip.csv`
+    * **Example CSV Manifest:** `/data/manifests/holidays/bali_trip.csv`
     * **Example Destination Video:** `/data/dest-videos/holidays/bali_trip.mp4`
 
 2. **Populate the CSV contents**
