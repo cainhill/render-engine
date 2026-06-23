@@ -80,7 +80,7 @@ This script is designed to run exclusively within a Docker container environment
           working_dir: /app
           command: python process_videos.py
           restart: always
-      ```
+      ```yaml
 
 <br />
 
