@@ -137,7 +137,7 @@ This script is designed to run exclusively within a Docker container environment
 
 ## 🧱 Dependencies
 
-* **[eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)**: A production-ready Docker image that combines Python 3.13 with FFmpeg and Git, providing a seamless environment for multimedia processing automation.
+* **[eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)**: A production-ready Docker image that combines Python with FFmpeg and Git, providing a seamless environment for multimedia processing automation.
 
 <br />
 
