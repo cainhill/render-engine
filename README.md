@@ -83,8 +83,8 @@ This script is designed to run exclusively within a Docker container environment
 
     The file name and relative subfolder path you choose for your CSV dictates the exact path and file name of the finished video. The engine automatically drops the `.csv` extension and replaces it with `.mp4` when saving to the `/data/dest-videos/` tree.
     
-    * **Example Input:** `/data/manifest/holidays/bali_trip.csv`
-    * **Example Output:** `/data/dest-videos/holidays/bali_trip.mp4`
+    * **Example CSV Manifest:** `/data/manifest/holidays/bali_trip.csv`
+    * **Example Destination Video:** `/data/dest-videos/holidays/bali_trip.mp4`
 
 2. Populate the CSV contents
 
