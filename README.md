@@ -25,14 +25,6 @@ With some more specific needs:
 * ✅ Only renders a video if input is new or changed
 
 
-## 🧱 Dependencies
-
-This page outlines how to setup these dependencies:
-
-* [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker container (gives Python/FFmpeg)
-* Mapped folders (see `docker-compose.yml`)
-
-
 ## ​​🗺️ Getting Started
 
 Check the Installation Steps for detailed setup instructions, but this is a 
@@ -137,6 +129,13 @@ This script runs a simple video compilation engine inside a Docker container. It
 4. **Process:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
 
 5. **Combine:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
+
+
+## 🧱 Dependencies
+
+This page outlines how to setup these dependencies:
+
+* [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)
 
 
 ## 🔮 Future Work
