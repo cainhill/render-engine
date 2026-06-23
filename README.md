@@ -9,7 +9,7 @@ An automated video compilation script designed to run exclusively within an [esw
 When triggered by webhook, this script copies slices from videos in your `/data/src-video/` path and arranges them in one or more compilation videos, saving to your `/data/dest-video/` path according to the instructions you give it using CSV in your `/data/manifest/` path.
 
 <br />
- 
+
 ## 💎 Features
 
 Why make this and not use an alternative?
