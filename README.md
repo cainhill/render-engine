@@ -40,7 +40,7 @@ To create your compilation videos, this script:
 
 4. **Processes:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
 
-5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifest/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
+5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
 <br />
 
@@ -60,7 +60,7 @@ This script is designed to run exclusively within a Docker container environment
 
     * **Host paths:** Replace the host paths (on the left side of the `:` symbol under the `volumes` key).
 
-    * **Read-only source videos:** Keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. This is a dmall precaution, ***it remains your responsibility to test this script on a small sample and to have a backup-and-restore strategy for your source videos***.
+    * **Read-only source videos:** Keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. This is a small precaution, ***it remains your responsibility to test this script on a small sample and to have a backup-and-restore strategy for your source videos***.
 
       ```
       version: '3.8'
