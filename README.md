@@ -6,7 +6,7 @@ An automated video compilation script designed to run exclusively within an [esw
 
 ## 📌 Purpose
 
-When triggered by webhook, this script copies slices from videos in your `/data/src-videos/` path and arranges them in one or more compilation videos, saving to your `/data/dest-videos/` path according to the instructions you give it using CSV in your `/data/manifests/` path.
+When triggered by webhook, this script copies slices from videos in your `/data/src-videos/` path and arranges them in one or more compilation videos, saving to your `/data/dest-videos/` path according to the instructions you give it using CSV in your `/data/manifests/` directory.
 
 <br />
 
@@ -38,9 +38,9 @@ To create your compilation videos, this script:
 
 3. **Checks:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
 
-4. **Processes:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
+4. **Processes:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` directory.
 
-5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
+5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subdirectory structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
 <br />
 
@@ -50,7 +50,7 @@ This script is designed to run exclusively within a Docker container environment
 
 1. **Create directories on the host machine**
 
-    Using your standard non-root user (UID 1000), create the folders for app, manifests, cache, and videos on your host machine. Creating them ***before*** launching Docker ensures they inherit correct user permissions for the script to work as intended.
+    Using your standard non-root user (UID 1000), create the directories for app, manifests, cache, and videos on your host machine. Creating them ***before*** launching Docker ensures they inherit correct user permissions for the script to work as intended.
 
 2. **Copy `process_videos.py` to your `/data/app/` directory**
 
@@ -88,7 +88,7 @@ This script is designed to run exclusively within a Docker container environment
 
 1. **Name and organise your CSV manifests**
 
-    The file name and relative subfolder path you choose for your CSV dictates the exact path and file name of the finished video. The engine automatically drops the `.csv` extension and replaces it with `.mp4` when saving to the `/data/dest-videos/` tree.
+    The file name and relative subdirectory path you choose for your CSV dictates the exact path and file name of the finished video. The engine automatically drops the `.csv` extension and replaces it with `.mp4` when saving to the `/data/dest-videos/` directory.
     
     * **Example CSV Manifest:** `/data/manifests/holidays/bali_trip.csv`
     * **Example Destination Video:** `/data/dest-videos/holidays/bali_trip.mp4`
@@ -97,7 +97,7 @@ This script is designed to run exclusively within a Docker container environment
 
     You may generate these manually or automatically, but the CSVs must look like this (including the headings):
 
-    ```
+    ```csv
     source,start_time,end_time,rotation
     a.mp4,0.328,4.275,0
     b.mp4,10.374,15.593,90
@@ -110,7 +110,7 @@ This script is designed to run exclusively within a Docker container environment
 
 3. **Trigger via webhook**
 
-    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifests/` tree and uses file modification dates to figure out new/changed CSVs that need to be rendered.
+    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifests/` directory and uses file modification dates to figure out new/changed CSVs that need to be rendered.
 
     To trigger a full scan and render, send an empty JSON POST request:
 
@@ -121,7 +121,7 @@ This script is designed to run exclusively within a Docker container environment
 
 4. **Check for output**
 
-    The script will return a 200 OK JSON response upon render completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
+    The script will return a 200 OK JSON response upon render completion. You will find the final rendered videos in the `/data/dest-videos/` directory once complete.
 
 <br />
 
