@@ -79,14 +79,14 @@ This script is designed to run exclusively within a Docker container environment
 
 ## 📋 Usage
 
-1. Name and organise your CSV manifest files
+1. **Name and organise your CSV manifest files**
 
     The file name and relative subfolder path you choose for your CSV dictates the exact path and file name of the finished video. The engine automatically drops the `.csv` extension and replaces it with `.mp4` when saving to the `/data/dest-videos/` tree.
     
     * **Example CSV Manifest:** `/data/manifest/holidays/bali_trip.csv`
     * **Example Destination Video:** `/data/dest-videos/holidays/bali_trip.mp4`
 
-2. Populate the CSV contents
+2. **Populate the CSV contents**
 
     You may generate these manually or automatically, but the CSVs must look like this (including the headings):
 
@@ -101,7 +101,7 @@ This script is designed to run exclusively within a Docker container environment
     * **start_time / end_time:** Cut boundaries in seconds. Aim for a maximum of 3 decimal places (e.g., `15.593` for millisecond-precision cuts). While the script can read longer numbers without crashing, FFmpeg only really uses 3 decimal places for calculating the nearest video frame.
     * **rotation:** May only be set to one of 0, 90, 180, 270. 0 (no change), 90 (clockwise), 180 (upside down), and 270 (counter-clockwise).
 
-3. Trigger via webhook
+3. **Trigger via webhook**
 
     The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifest/` tree and uses file modification dates to figure out new/changed CSVs that need to be rendered.
 
@@ -112,7 +112,7 @@ This script is designed to run exclusively within a Docker container environment
     * **Headers:** `Content-Type: application/json`
     * **Payload:** `{}`
 
-4. Video compilation
+4. **Check for output**
 
     The script will keep n8n waiting until the render is complete, and return a 200 OK JSON response upon completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
 
