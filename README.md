@@ -56,25 +56,25 @@ This script is designed to run exclusively within a Docker container environment
 
    * Importantly, keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. (It is your responsibility to test this script on a small sample and to have a backup-and-restore strategy for you source videos.)
 
-    ```
-    version: '3.8'
-    services:
-      render-engine:
-        container_name: render-engine
-        image: eswardudi/python-ffmpeg:latest
-        user: "1000:1000"
-        ports:
-          - "5000:5000"
-        volumes:
-          - </path/to/your/script/dir>:/app:ro
-          - </path/to/your/manifest/dir>:/data/manifest:ro
-          - </path/to/your/source/videos>:/data/src-videos:ro
-          - </path/to/your/cache/dir>:/data/cache:rw
-          - </path/to/your/destination/videos>:/data/dest-videos:rw
-        working_dir: /app
-        command: python process_videos.py
-        restart: always
-    ```
+      ```
+      version: '3.8'
+      services:
+        render-engine:
+          container_name: render-engine
+          image: eswardudi/python-ffmpeg:latest
+          user: "1000:1000"
+          ports:
+            - "5000:5000"
+          volumes:
+            - </path/to/your/script/dir>:/app:ro
+            - </path/to/your/manifest/dir>:/data/manifest:ro
+            - </path/to/your/source/videos>:/data/src-videos:ro
+            - </path/to/your/cache/dir>:/data/cache:rw
+            - </path/to/your/destination/videos>:/data/dest-videos:rw
+          working_dir: /app
+          command: python process_videos.py
+          restart: always
+      ```
 
 
 ## 📋 Usage
