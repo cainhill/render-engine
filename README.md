@@ -114,12 +114,17 @@ This script is designed to run exclusively within a Docker container environment
 
 4. **Check for output**
 
-    The script will keep n8n waiting until the render is complete, and return a 200 OK JSON response upon completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
+    The script will return a 200 OK JSON response upon render completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
+
+
+## 🧰 Use Cases
+
+* Family Videos
+  * **Scenario:** I want to automatically compile video montages from our family videos.
+  * **Tooling:** I use an n8n workflow to tell `render-engine` which Immich family videos to compile into montage videos.
 
 
 ## 🧱 Dependencies
-
-This page outlines how to setup these dependencies:
 
 * [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)
 
