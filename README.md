@@ -2,6 +2,7 @@
 
 An automated video compilation script designed to run exclusively within an [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg) Docker container, eliminating the need to install or configure heavy video-processing tools on your host system.
  
+ 
 ## 📌 Purpose
 
 When triggered by webhook, this script copies slices from videos in your `/data/src-video/` path and arranges them in one or more compilation videos, saving to your `/data/dest-video/` path according to the instructions you give it using CSV in your `/data/manifest/` path.
