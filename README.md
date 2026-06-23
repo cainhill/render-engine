@@ -42,7 +42,7 @@ To create your compilation videos, this script:
 
 5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
-<br / >
+<br />
 
 ## 📦 Installation Steps
 
@@ -120,8 +120,9 @@ This script is designed to run exclusively within a Docker container environment
 4. **Check for output**
 
     The script will return a 200 OK JSON response upon render completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
- 
- 
+
+<br />
+
 ## 🧰 Use Cases
 
 * **Family Memories Pipeline**
@@ -129,13 +130,15 @@ This script is designed to run exclusively within a Docker container environment
   * **Scenario:** I want to automatically compile video montages from our family videos.
 
   * **Tooling:** I use an n8n workflow to tell `render-engine` which Immich family videos to compile into montage videos.
- 
- 
+
+<br />
+
 ## 🧱 Dependencies
 
 * [eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)
- 
- 
+
+<br />
+
 ## 🔮 Future Work
 
 * 💡 Enable multi-threading
@@ -144,13 +147,15 @@ This script is designed to run exclusively within a Docker container environment
 * 💡 Logic checks ('start_time > end_time' = error)
 * 💡 Error checks (missing files)
 * 💡 Rate limiting / stop overlap requests
- 
- 
+
+<br />
+
 ## 🔎 Key Words
 
 Video Compilation / FFmpeg / Python / Docker / Web Hook / n8n / EDL / Edit Decisions List
- 
- 
+
+<br />
+
 ## 👍 Related Resources
 
 Before creating this, I reviewed these resources and alternative solutions:
@@ -158,8 +163,9 @@ Before creating this, I reviewed these resources and alternative solutions:
 * [AMIA Open Source / ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
 * [pilotpirxie / json-to-ffmpeg](https://github.com/pilotpirxie/json-to-ffmpeg)
 * [kcsry / ffmpeg-edl](https://github.com/kcsry/ffmpeg-edl)
- 
- 
+
+<br />
+
 ## 🎨 License
 
 Usage is provided under the MIT License. See LICENSE for the full details.
