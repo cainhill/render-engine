@@ -13,10 +13,10 @@ When triggered by webhook, this script makes slices from videos in your `/data/s
 Why make this and not use an alternative?
 
 I needed a video compilation script that:
-* ✅ Wraps complicated FFmpeg syntax
+* ✅ Makes videos from one or more source videos
 * ✅ Fixes video inconsistencies before joining
 * ✅ Rotates and resizes videos
-* ✅ Makes videos from one or more source videos
+* ✅ Hides complicated underlying syntax (FFmpeg)
 
 With these more specific needs:
 * ✅ Runs in a Dockerised Python environment
