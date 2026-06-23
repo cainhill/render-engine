@@ -25,20 +25,24 @@ With some more specific needs:
 * 📐 Only renders a video if input is new or changed
 
 
-## ​​🗺️ Getting Started
+## ⚙️ What It Does
 
-Check the Installation Steps for detailed setup instructions, but this is a 
+To create your compilation videos, this script:
 
-1. Create directories on the host machine
-2. Copy `process_videos.py` to your `/data/app/` directory
-3. Configure and run the `docker-compose.yml`
-4. Update your automations to save CSV manifest files to your `/data/manifest/` tree and to trigger the webhook when it makes sense for you
-5. Check the `/data/dest-videos/` path to find your automatically compiled videos
+1. **Listens:** It waits for a web request sent to `http://render-engine:5000/render`.
+
+2. **Scans:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
+
+3. **Checks:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
+
+4. **Processes:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
+
+5. **Combines:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
 
 ## 📦 Installation Steps
 
-This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg. 
+This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg ([eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)), which you will need to set up with the following steps.
 
 1. Create directories on the host machine
 
@@ -114,21 +118,6 @@ This script is designed to run exclusively within a Docker container environment
 4. Video compilation
 
     The script will keep n8n waiting until the render is complete, and return a 200 OK JSON response upon completion. You will find the final rendered videos in the `/data/dest-videos/` tree once complete.
-
-
-## ⚙️ How It Works
-
-This script runs a simple video compilation engine inside a Docker container. It stays alive as a background service and processes videos on demand.
-
-1. **Listen:** It waits for a web request sent to `http://render-engine:5000/render`.
-
-2. **Scan:** Once triggered, it looks inside `/data/manifest/` for your CSV manifest files.
-
-3. **Check:** It skips any CSV file if the final video already exists and the CSV hasn't been changed since the last render.
-
-4. **Process:** For new or updated CSVs, it trims, rotates, resizes, and saves the referenced source videos as cached clips in the `/data/cache/` folder.
-
-5. **Combine:** It glues those cached clips together into a finished video. The final file is saved to `/data/dest-videos/` using the ***exact same name and relative subfolder structure*** as your input CSV (e.g., `/data/manifests/holidays/bali_2026.csv` becomes `/data/dest-videos/holidays/bali_2026.mp4`).
 
 
 ## 🧱 Dependencies
