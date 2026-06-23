@@ -54,7 +54,7 @@ This script is designed to run exclusively within a Docker container environment
 
     * Remember to replace the host paths (on the left side of the `:` symbol under the `volumes` key).
 
-   * Importantly, keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. As a disclaimer, I take no responsibility for any mistakes caused by this script does outside the context of my purposes and you should have a backup-and-restore strategy for you source videos anyway.
+   * Importantly, keep the `:ro` attached to the `/data/src-videos` to ensure this script has read only access to your source videos. (It is your responsibility to test this script on a small sample and to have a backup-and-restore strategy for you source videos.)
 
     ```
     version: '3.8'
