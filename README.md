@@ -1,6 +1,6 @@
 # render-engine
 
-A script for making one or more compilation videos from source videos.
+A script that makes one or more compilation videos from source videos. Must be used within a ([eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)) Docker container so the script can access video processing tools it needs.
 
 
 ## 📌 Purpose
@@ -42,7 +42,7 @@ To create your compilation videos, this script:
 
 ## 📦 Installation Steps
 
-This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg ([eswardudi/python-ffmpeg](https://hub.docker.com/r/eswardudi/python-ffmpeg)), which you will need to set up with the following steps.
+This script is designed to run exclusively within a Docker container environment pre-configured with Python and FFmpeg , which you will need to set up with the following steps.
 
 1. Create directories on the host machine
 
