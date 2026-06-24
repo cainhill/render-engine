@@ -69,6 +69,8 @@ This script is designed to run exclusively within a Docker container environment
           container_name: render-engine
           image: eswardudi/python-ffmpeg:latest
           user: "1000:1000"
+          networks:
+            - <your bridge network>
           ports:
             - "5000:5000"
           volumes:
@@ -80,13 +82,16 @@ This script is designed to run exclusively within a Docker container environment
           working_dir: /app
           command: python process_videos.py
           restart: always
+      networks:
+        <your bridge network>:
+          external: true
       ```
 
 <br />
 
 ## ⚙️ Environment Variables
 
-You can configure the video output rewolution and frames per second (FPS) by passing the following environment variables into the Docker container:
+You can configure the video output resolution and frames per second (FPS) by passing the following environment variables into the Docker container:
 
 | Variable | Description | Default | Options |
 | :--- | :--- | :--- | :--- |
@@ -121,14 +126,12 @@ You can configure the video output rewolution and frames per second (FPS) by pas
 
 3. **Trigger via webhook**
 
-    The engine runs as a background service waiting for an HTTP POST request. You do not need to send any video files or manifest data in the request body, the script automatically scans your `/data/manifests/` directory and uses file modification dates to figure out new/changed CSVs that need to be rendered.
+    The engine runs as a background service waiting for an HTTP GET request. You do not need to specify any particular details, the script automatically scans your `/data/manifests/` directory and uses file modification dates to find new/changed CSVs that need to be rendered.
 
-    To trigger a full scan and render, send an empty JSON POST request:
+    To trigger a full scan and render, send a GET request:
 
-    * **Method:** `POST`
+    * **Method:** `GET`
     * **URL:** `http://render-engine:5000/render`
-    * **Headers:** `Content-Type: application/json`
-    * **Payload:** `{}`
 
 4. **Check for output**
 
